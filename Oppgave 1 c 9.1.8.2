@@ -1,0 +1,28 @@
+def all_z_words(words):
+    return [word for word in words if word.startswith('z')]
+
+# Tester for all_z_words
+def test_all_z_words():
+    assert all_z_words(['zebra', 'apple', 'zoom']) == ['zebra', 'zoom']
+    assert all_z_words(['apple', 'banana', 'cherry']) == []
+    assert all_z_words(['zoom', 'zap', 'zen']) == ['zoom', 'zap', 'zen']
+    assert all_z_words([]) == []
+
+# Kjør tester
+test_all_z_words()
+print("Alle tester bestått!")
+
+
+def all_z_words_filter(words):
+    return list(filter(lambda word: word.startswith('z'), words))
+
+# Tester for all_z_words_filter
+def test_all_z_words_filter():
+    assert all_z_words_filter(['zebra', 'apple', 'zoom']) == ['zebra', 'zoom']
+    assert all_z_words_filter(['apple', 'banana', 'cherry']) == []
+    assert all_z_words_filter(['zoom', 'zap', 'zen']) == ['zoom', 'zap', 'zen']
+    assert all_z_words_filter([]) == []
+
+# Kjør tester
+test_all_z_words_filter()
+print("Alle tester for filter bestått!")
